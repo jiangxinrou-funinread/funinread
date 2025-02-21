@@ -1,0 +1,21 @@
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <input class="search-input" placeholder="搜索小说、作者" />
+    <image class="search-btn" src="/icons/searchbook.png" bindtap="onSearch"></image>
+  </view>
+
+  <!-- 小说列表 -->
+  <view class="novel-list">
+    <block wx:for="{{novels}}" wx:key="id">
+      <view class="novel-item" bindtap="goToNovelDetail" data-id="{{item.id}}">
+        <image class="novel-cover" src="{{item.cover}}" mode="aspectFill"></image>
+        <view class="novel-info">
+          <text class="novel-title">{{item.title}}</text>
+          <text class="novel-author">{{item.author}}</text>
+          <text class="novel-description">{{item.description}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view> 

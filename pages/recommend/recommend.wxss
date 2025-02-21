@@ -1,0 +1,73 @@
+.recommend-page {
+  padding: 20rpx;
+  background-color: #f8f9fa;
+}
+
+.swiper {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+  margin-bottom: 30rpx;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.novel-list {
+  width: 100%;
+}
+
+.novel-item {
+  display: flex;
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.novel-item:active {
+  transform: scale(0.98);
+}
+
+.novel-cover {
+  width: 160rpx;
+  height: 220rpx;
+  object-fit: cover;
+}
+
+.novel-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20rpx;
+}
+
+.novel-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.novel-author {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 15rpx;
+}
+
+.novel-summary {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

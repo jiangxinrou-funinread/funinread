@@ -1,0 +1,14 @@
+<view class="container">
+  <!-- 小说排行榜 -->
+  <view class="rank-list">
+    <block wx:for="{{novels}}" wx:key="id">
+      <view class="rank-item" bindtap="goToNovelDetail" data-id="{{item.id}}">
+        <image class="novel-cover" src="{{item.cover}}" mode="aspectFill"></image>
+        <view class="novel-info">
+          <text class="novel-title">{{item.title}}</text>
+          <text class="novel-author">{{item.author}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view> 

@@ -1,0 +1,28 @@
+.container {
+  padding: 30rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* 分类列表 */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* 左对齐 */
+  gap: 10rpx; /* 添加间距 */
+}
+
+.category-item {
+  width: 27%; /* 调整为四列布局 */
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.category-name {
+  font-size: 28rpx;
+  color: #333;
+} 

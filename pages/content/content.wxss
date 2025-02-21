@@ -1,0 +1,9 @@
+.container {
+  padding: 40rpx;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-size: 30rpx;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}

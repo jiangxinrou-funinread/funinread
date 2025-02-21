@@ -1,0 +1,11 @@
+<!-- novelDetail.wxml -->
+<view class="container">
+  <view class="novel-info">
+    <image class="cover" src="{{novelDetail.cover}}" mode="aspectFill"></image>
+    <view class="info">
+      <text class="name">{{novelDetail.name}}</text>
+      <text class="author">{{novelDetail.author}}</text>
+      <text class="description">{{novelDetail.description}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<view class="home-page">
+    <!-- 顶部导航栏 -->
+    <view class="nav-bar">
+        <text>小说阅读</text>
+    </view>
+    <!-- 搜索框 -->
+    <view class="search-box">
+        <input placeholder="搜索小说" bindinput="onSearchInput" />
+        <button bindtap="onSearch">搜索</button>
+    </view>
+    <!-- 分类推荐 -->
+    <view class="category-recommend">
+        <view class="category-item" wx:for="{{categoryList}}" wx:key="index">
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+    <!-- 热门小说推荐 -->
+    <view class="hot-novel-recommend">
+        <view class="novel-item" wx:for="{{hotNovelList}}" wx:key="id">
+            <image class="novel-cover" src="{{item.cover}}" mode="aspectFill"></image>
+            <view class="novel-info">
+                <text class="novel-title">{{item.title}}</text>
+                <text class="novel-author">{{item.author}}</text>
+            </view>
+        </view>
+    </view>
+</view>

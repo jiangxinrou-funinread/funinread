@@ -1,0 +1,29 @@
+<view class="recommend-page">
+  <!-- 轮播图 -->
+  <swiper class="swiper" indicator-dots autoplay interval="3000" duration="500">
+    <block wx:for="{{swiperList}}" wx:key="id">
+      <swiper-item>
+        <image 
+          src="{{item.image}}" 
+          mode="aspectFill" 
+          bindtap="swiperTap" 
+          data-novel-id="{{item.novelId}}"
+        ></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 小说推荐列表 -->
+  <view class="novel-list">
+    <block wx:for="{{novelList}}" wx:key="id">
+      <view class="novel-item" bindtap="goToNovelDetail" data-id="{{item.id}}">
+        <image class="novel-cover" src="{{item.cover}}" mode="aspectFill"></image>
+        <view class="novel-info">
+          <text class="novel-title">{{item.title}}</text>
+          <text class="novel-author">作者: {{item.author}}</text>
+          <text class="novel-summary">{{item.summary}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

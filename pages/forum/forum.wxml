@@ -1,0 +1,39 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 发布新话题按钮 -->
+  <view class="add-topic-btn" bindtap="goToAddTopic">
+    <image class="add-icon" src="/icons/add.png"></image>
+  </view>
+
+  <!-- 话题列表 -->
+  <view class="topic-list">
+    <block wx:for="{{topics}}" wx:key="id">
+      <view class="topic-item" bindtap="goToTopicDetail" data-id="{{item.id}}">
+        <view class="topic-header">
+          <image class="topic-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+          <view class="topic-info">
+            <text class="topic-author">{{item.author}}</text>
+          </view>
+          <image class="more-btn" src="/icons/more.png" bindtap="showMoreOptions" data-id="{{item.id}}" catchtap="stopPropagation"></image>
+        </view>
+        <view class="topic-title">{{item.title}}</view>
+        <view class="topic-content">{{item.content}}</view>
+        <view class="topic-footer">
+          <view class="topic-action" bindtap="toggleLike" data-id="{{item.id}}">
+            <image class="action-icon" src="{{item.isLiked ? '/icons/good-active.png' : '/icons/good.png'}}"></image>
+            <text class="action-text">{{item.likes}}</text>
+          </view>
+          <view class="topic-action">
+            <image class="action-icon" src="/icons/say.png"></image>
+            <text class="action-text">{{item.comments}}</text>
+          </view>
+          <text class="topic-time">{{item.time}}</text>
+        </view>
+        <view class="more-options" wx:if="{{currentMoreOptionsId === item.id}}">
+          <view class="option" bindtap="markAsNotInterested" data-id="{{item.id}}">不感兴趣</view>
+          <view class="option" bindtap="reportContent" data-id="{{item.id}}">内容反馈</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

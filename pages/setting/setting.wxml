@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="avatar-container" bindtap="chooseAvatar">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+    <text class="change-avatar-txt">点击更换头像</text>
+  </view>
+  <!-- 这里可以添加其他个人信息设置项 -->
+  <button class="save-btn" bindtap="saveSetting">保存设置</button>
+</view>

@@ -1,0 +1,85 @@
+/* novelRank.wxss */
+.container {
+  padding: 30rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 30rpx;
+  padding-left: 20rpx;
+}
+
+.rank-list {
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+}
+
+.rank-item {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.rank-item:active {
+  background-color: #f8f9fa;
+}
+
+.rank-item:last-child {
+  border-bottom: none;
+}
+
+.cover {
+  width: 140rpx;
+  height: 180rpx;
+  border-radius: 12rpx;
+  margin-right: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.author {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.rank-number {
+  font-size: 36rpx;
+  color: #87CEEB;
+  margin-right: 30rpx;
+  font-weight: 500;
+}
+
+.rank-type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.rank-type-item {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.rank-type-name {
+  font-size: 32rpx;
+  color: #333;
+}

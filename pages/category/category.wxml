@@ -1,0 +1,10 @@
+<view class="container">
+  <!-- 分类列表 -->
+  <view class="category-list">
+    <block wx:for="{{categories}}" wx:key="id">
+      <view class="category-item" bindtap="goToCategoryDetail" data-id="{{item.id}}">
+        <text class="category-name">{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view> 

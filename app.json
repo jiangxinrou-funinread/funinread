@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/categoryDetail/categoryDetail",
+    "pages/bookshelf/bookshelf",
+    "pages/forum/forum",
+    "pages/user/user",
+    "pages/activity/activity",
+    "pages/rank/rank",
+    "pages/rankDetail/rankDetail"
+  ],
+  "window": {
+    "navigationBarTitleText": "小说阅读",
+    "navigationBarBackgroundColor": "#13227a",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#13227a",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/icons/home.png",
+        "selectedIconPath": "/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/bookshelf/bookshelf",
+        "text": "书架",
+        "iconPath": "/icons/bookroom.png",
+        "selectedIconPath": "/icons/bookroom-active.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "论坛",
+        "iconPath": "/icons/forum.png",
+        "selectedIconPath": "/icons/forum-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/icons/mine.png",
+        "selectedIconPath": "/icons/mine-active.png"
+      }
+    ]
+  }
+}

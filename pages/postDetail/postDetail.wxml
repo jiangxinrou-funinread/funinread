@@ -1,0 +1,31 @@
+<!-- postDetail.wxml -->
+<view class="container">
+  <!-- 封面图 -->
+  <image class="cover-image" src="{{post.coverImage}}" mode="aspectFill"></image>
+  <!-- 帖子内容区域 -->
+  <view class="post-content">
+    <view class="post-header">
+      <image class="avatar" src="{{post.authorAvatar}}" mode="aspectFill"></image>
+      <text class="author-name">{{post.author}}</text>
+    </view>
+    <view class="post-title">{{post.title}}</view>
+    <view class="post-text">{{post.content}}</view>
+  </view>
+  <!-- 评论列表 -->
+  <view class="comments">
+    <block wx:for="{{post.comments}}" wx:key="id">
+      <view class="comment">
+        <image class="avatar" src="{{item.authorAvatar}}" mode="aspectFill"></image>
+        <view class="comment-body">
+          <text class="comment-author">{{item.author}}</text>
+          <text class="comment-text">{{item.content}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 评论输入框 -->
+  <view class="comment-input">
+    <input type="text" placeholder="写评论..." value="{{commentInput}}" bindinput="bindCommentInput" />
+    <button bindtap="submitComment">发表</button>
+  </view>
+</view>

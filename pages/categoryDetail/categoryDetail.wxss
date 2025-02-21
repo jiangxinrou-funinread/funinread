@@ -1,0 +1,98 @@
+.container {
+  padding: 30rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* 搜索框 */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f5f7fa;
+  border-radius: 20rpx;
+  padding: 15rpx 20rpx;
+  box-shadow: none;
+  margin-bottom: 10rpx;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1rpx solid #e0e0e0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 10rpx;
+  font-size: 28rpx;
+  color: #999;
+  background-color: transparent;
+}
+
+.search-btn {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  border: none;
+  background-color: transparent;
+}
+
+.header {
+  margin-bottom: 30rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #13227a;
+}
+
+.novel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  margin-top: 10rpx;
+}
+
+.novel-item {
+  display: flex;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+}
+
+.novel-cover {
+  width: 150rpx;
+  height: 200rpx;
+  border-radius: 12rpx;
+  margin-right: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.novel-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.novel-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #13227a;
+}
+
+.novel-author {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.novel-description {
+  font-size: 24rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+} 

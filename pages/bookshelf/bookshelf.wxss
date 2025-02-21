@@ -1,0 +1,145 @@
+.container {
+  padding: 30rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 30rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.last-read {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  position: relative;
+  width: 100%;
+}
+
+.last-read-cover {
+  width: 140rpx;
+  height: 180rpx;
+  border-radius: 12rpx;
+  margin-right: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.last-read-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.last-read-title {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.last-read-author {
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.last-read-progress {
+  font-size: 24rpx;
+  color: #13227a;
+  margin-bottom: 10rpx;
+}
+
+.last-read-chapter {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.continue-reading-btn {
+  position: absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+  background-color: #13227a;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.bookshelf-list {
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+  width: 100%;
+}
+
+.book-item {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.book-item:last-child {
+  border-bottom: none;
+}
+
+.book-cover {
+  width: 140rpx;
+  height: 180rpx;
+  border-radius: 12rpx;
+  margin-right: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.book-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.book-author {
+  font-size: 26rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.book-progress {
+  font-size: 24rpx;
+  color: #13227a;
+}
+
+.empty-tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+
+.empty-icon {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 30rpx;
+}
+
+.empty-text {
+  font-size: 26rpx;
+  color: #999;
+} 

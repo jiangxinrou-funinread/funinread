@@ -1,0 +1,36 @@
+<view class="container">
+  <!-- 上次阅读的书籍 -->
+  <view class="last-read" bindtap="continueReading">
+    <image class="last-read-cover" src="{{lastReadBook.cover}}" mode="aspectFill"></image>
+    <view class="last-read-info">
+      <text class="last-read-title">{{lastReadBook.title}}</text>
+      <text class="last-read-author">{{item.author}}</text>
+      <text class="last-read-progress">阅读进度：{{lastReadBook.progress}}%</text>
+      <text class="last-read-chapter">上次阅读：{{lastReadBook.lastChapter}}</text>
+    </view>
+    <!-- 继续阅读按钮 -->
+    <view class="continue-reading-btn">
+      <text>继续阅读</text>
+    </view>
+  </view>
+
+  <!-- 书架列表 -->
+  <view class="bookshelf-list">
+    <block wx:for="{{books}}" wx:key="id">
+      <view class="book-item" bindtap="goToBookDetail" data-id="{{item.id}}">
+        <image class="book-cover" src="{{item.cover}}" mode="aspectFill"></image>
+        <view class="book-info">
+          <text class="book-title">{{item.title}}</text>
+          <text class="book-author">{{item.author}}</text>
+          <text class="book-progress">阅读进度：{{item.progress}}%</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 空书架提示 -->
+  <view class="empty-tip" wx:if="{{books.length === 0}}">
+    <image class="empty-icon" src="/icons/empty-bookshelf.png"></image>
+    <text class="empty-text">书架空空如也，快去添加书籍吧~</text>
+  </view>
+</view> 

@@ -1,0 +1,51 @@
+.container {
+  padding: 30rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.chapter-list {
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+}
+
+.chapter-item {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.chapter-item:active {
+  background-color: #f8f9fa;
+}
+
+.chapter-item:last-child {
+  border-bottom: none;
+}
+
+.chapter-title {
+  font-size: 30rpx;
+  color: #333;
+  flex: 1;
+}
+
+.chapter-index {
+  font-size: 26rpx;
+  color: #999;
+  margin-right: 30rpx;
+}
+
+.chapter-item::after {
+  content: '›';
+  font-size: 40rpx;
+  color: #ddd;
+  margin-left: 20rpx;
+  transition: color 0.2s ease;
+}
+
+.chapter-item:active::after {
+  color: #87CEEB;
+}

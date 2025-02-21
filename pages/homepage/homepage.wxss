@@ -1,0 +1,87 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 80rpx;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.search-box input {
+  flex: 1;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  padding: 10rpx;
+}
+
+.search-box button {
+  margin-left: 10rpx;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5rpx;
+  padding: 10rpx;
+}
+
+.category-recommend {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.category-item {
+  background-color: #eee;
+  border-radius: 5rpx;
+  padding: 10rpx;
+  margin: 10rpx;
+}
+
+.hot-novel-recommend {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+
+.novel-item {
+  width: 45%;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.novel-cover {
+  width: 100%;
+  height: 200rpx;
+}
+
+.novel-info {
+  padding: 10rpx;
+}
+
+.novel-title {
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.novel-author {
+  font-size: 20rpx;
+  color: #999;
+}

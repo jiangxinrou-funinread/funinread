@@ -1,0 +1,8 @@
+<view class="container">
+  <!-- 活动海报列表 -->
+  <view class="activity-list">
+    <block wx:for="{{activityImages}}" wx:key="index">
+      <image class="activity-image" src="{{item}}" mode="aspectFill"></image>
+    </block>
+  </view>
+</view> 

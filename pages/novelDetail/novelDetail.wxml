@@ -1,0 +1,27 @@
+<view class="container">
+  <!-- 小说封面 -->
+  <image class="cover" src="{{novelDetail.cover}}" mode="aspectFill"></image>
+  
+  <!-- 小说信息 -->
+  <view class="info">
+    <text class="title">{{novelDetail.title}}</text>
+    <text class="author">作者: {{novelDetail.author}}</text>
+    <text class="summary">{{novelDetail.summary}}</text>
+  </view>
+
+  <!-- 章节目录 -->
+  <view class="chapters">
+    <view class="chapter-header" bindtap="toggleChapters">
+      <text>章节目录</text>
+      <text>{{showAllChapters ? '收起' : '展开'}}</text>
+    </view>
+    
+    <view class="chapter-list" wx:if="{{showAllChapters}}">
+      <block wx:for="{{novelDetail.chapters}}" wx:key="id">
+        <view class="chapter-item" bindtap="goToChapter" data-id="{{item.id}}">
+          <text>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view> 

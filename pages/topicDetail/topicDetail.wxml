@@ -1,0 +1,51 @@
+<view class="container">
+  <!-- 话题详情 -->
+  <view class="topic-detail">
+    <view class="topic-header">
+      <image class="topic-avatar" src="{{topic.avatar}}" mode="aspectFill"></image>
+      <view class="topic-info">
+        <text class="topic-author">{{topic.author}}</text>
+        <text class="topic-time">{{topic.time}}</text>
+      </view>
+    </view>
+    <text class="topic-title">{{topic.title}}</text>
+    <text class="topic-content">{{topic.content}}</text>
+    <view class="topic-footer">
+      <view class="topic-action" bindtap="toggleLike">
+        <image class="action-icon" src="{{topic.isLiked ? '/icons/good-active.png' : '/icons/good.png'}}"></image>
+        <text class="action-text">{{topic.likes}}</text>
+      </view>
+      <view class="topic-action">
+        <image class="action-icon" src="/icons/say.png"></image>
+        <text class="action-text">{{topic.comments}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 评论列表 -->
+  <view class="comment-list">
+    <block wx:for="{{comments}}" wx:key="id">
+      <view class="comment-item">
+        <view class="comment-header">
+          <image class="comment-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+          <view class="comment-info">
+            <text class="comment-author">{{item.author}}</text>
+            <text class="comment-time">{{item.time}}</text>
+          </view>
+        </view>
+        <text class="comment-content">{{item.content}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 评论输入框 -->
+  <view class="comment-input-area">
+    <input
+      class="comment-input"
+      placeholder="写下你的评论..."
+      value="{{newComment}}"
+      bindinput="onCommentInput"
+    />
+    <button class="comment-submit-btn" bindtap="submitComment">提交</button>
+  </view>
+</view> 
