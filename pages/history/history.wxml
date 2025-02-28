@@ -1,0 +1,18 @@
+<view class="container">
+  <block wx:if="{{historyBooks.length > 0}}">
+    <block wx:for="{{historyBooks}}" wx:key="id">
+      <view class="history-item" bindtap="goToBookDetail" data-id="{{item.id}}">
+        <image class="book-cover" src="{{item.cover}}" mode="aspectFill"></image>
+        <view class="book-info">
+          <text class="book-title">{{item.title}}</text>
+          <text class="book-author">{{item.author}}</text>
+        </view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="no-history">
+      <text>暂时还没有阅读历史哦~</text>
+    </view>
+  </block>
+</view> 

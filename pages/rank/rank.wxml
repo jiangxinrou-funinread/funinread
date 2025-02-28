@@ -1,23 +1,70 @@
 <!-- novelRank.wxml -->
 <view class="container">
-  <view class="title">热门小说榜单</view>
-  <view class="rank-list">
-    <block wx:for="{{novelList}}" wx:key="unique">
-      <view class="rank-item" bindtap="goToDetail" data-novel-id="{{item.id}}">
-        <image class="cover" src="{{item.cover}}" mode="aspectFill"></image>
-        <view class="info">
-          <text class="name">{{item.name}}</text>
-          <text class="author">{{item.author}}</text>
+  <!-- 热门小说榜单 -->
+  <view class="rank-section">
+    <text class="section-title">热门小说榜单</text>
+    <view class="rank-list">
+      <block wx:for="{{hotNovels}}" wx:key="id">
+        <view class="rank-item">
+          <text class="rank-number">{{index + 1}}</text>
+          <image class="novel-cover" src="{{item.cover}}" mode="aspectFill"></image>
+          <view class="novel-info">
+            <text class="novel-title">{{item.title}}</text>
+            <text class="novel-author">{{item.author}}</text>
+          </view>
         </view>
-      </view>
-    </block>
+      </block>
+    </view>
   </view>
-  <!-- 榜单分类列表 -->
-  <view class="rank-type-list">
-    <block wx:for="{{rankTypes}}" wx:key="id">
-      <view class="rank-type-item" bindtap="goToRankDetail" data-id="{{item.id}}">
-        <text class="rank-type-name">{{item.name}}</text>
-      </view>
-    </block>
+
+  <!-- 今日榜单 -->
+  <view class="rank-section">
+    <text class="section-title">今日榜单</text>
+    <view class="rank-list">
+      <block wx:for="{{todayNovels}}" wx:key="id">
+        <view class="rank-item">
+          <text class="rank-number">{{index + 1}}</text>
+          <image class="novel-cover" src="{{item.cover}}" mode="aspectFill"></image>
+          <view class="novel-info">
+            <text class="novel-title">{{item.title}}</text>
+            <text class="novel-author">{{item.author}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 完结榜单 -->
+  <view class="rank-section">
+    <text class="section-title">完结榜单</text>
+    <view class="rank-list">
+      <block wx:for="{{completedNovels}}" wx:key="id">
+        <view class="rank-item">
+          <text class="rank-number">{{index + 1}}</text>
+          <image class="novel-cover" src="{{item.cover}}" mode="aspectFill"></image>
+          <view class="novel-info">
+            <text class="novel-title">{{item.title}}</text>
+            <text class="novel-author">{{item.author}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 每周榜单 -->
+  <view class="rank-section">
+    <text class="section-title">每周榜单</text>
+    <view class="rank-list">
+      <block wx:for="{{weeklyNovels}}" wx:key="id">
+        <view class="rank-item">
+          <text class="rank-number">{{index + 1}}</text>
+          <image class="novel-cover" src="{{item.cover}}" mode="aspectFill"></image>
+          <view class="novel-info">
+            <text class="novel-title">{{item.title}}</text>
+            <text class="novel-author">{{item.author}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
   </view>
 </view>

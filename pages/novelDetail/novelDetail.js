@@ -1,34 +1,39 @@
 Page({
   data: {
-    novelDetail: {},
+    novelDetail: {
+      cover: 'https://funinreadpictures.blob.core.windows.net/images/cover1.jpg',
+      title: '',
+      author: '',
+      summary: '',
+      chapters: []
+    },
     showAllChapters: false
   },
 
   onLoad: function(options) {
     const novelId = options.novelId;
-    this.fetchNovelDetail(novelId);
+    if (novelId) {
+      this.fetchNovelDetail(novelId);
+    } else {
+      console.error('未接收到小说ID');
+    }
   },
 
   fetchNovelDetail: function(novelId) {
-    // 这里应该是从服务器获取小说详情的逻辑
-    // 为了示例，我们使用假数据
-    const novelList = [
-      {
-        id: 1,
-        title: "小说1",
-        author: "作者1",
-        cover: "https://example.com/cover1.jpg",
-        summary: "这是一本精彩的小说，情节跌宕起伏……",
-        chapters: [
-          { id: 1, title: '第一章' },
-          { id: 2, title: '第二章' }
-        ]
+    wx.request({
+      url: `https://content.funinread.cn/api/novels/${novelId}`,
+      method: 'GET',
+      success: (res) => {
+        if (res.statusCode === 200) {
+          this.setData({
+            novelDetail: res.data,
+            chapters: res.data.chapters || []
+          });
+        }
+      },
+      fail: (err) => {
+        console.error('获取小说详情失败', err);
       }
-    ];
-    
-    const novelDetail = novelList.find(novel => novel.id == novelId);
-    this.setData({
-      novelDetail: novelDetail
     });
   },
 

@@ -8,10 +8,17 @@
     "pages/user/user",
     "pages/activity/activity",
     "pages/rank/rank",
-    "pages/rankDetail/rankDetail"
+    "pages/rankDetail/rankDetail",
+    "pages/editProfile/editProfile",
+    "pages/addTopic/addTopic",
+    "pages/topicDetail/topicDetail",
+    "pages/history/history",
+    "pages/settings/settings",
+    "pages/messages/messages",
+    "pages/userAgreement/userAgreement",
+    "pages/customerService/customerService"
   ],
   "window": {
-    "navigationBarTitleText": "小说阅读",
     "navigationBarBackgroundColor": "#13227a",
     "navigationBarTextStyle": "white"
   },

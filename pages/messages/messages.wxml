@@ -1,0 +1,20 @@
+<view class="container">
+  <block wx:if="{{messages.length > 0}}">
+    <block wx:for="{{messages}}" wx:key="id">
+      <view class="message-item" bindtap="goToTopicDetail" data-id="{{item.topicId}}">
+        <image class="avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+        <view class="content">
+          <text class="author">{{item.author}}</text>
+          <text class="text">{{item.content}}</text>
+          <text class="time">{{item.time}}</text>
+        </view>
+        <view class="status" wx:if="{{item.isDeleted}}">此评论已删除</view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="no-message">
+      <text>暂时还没有消息哦~</text>
+    </view>
+  </block>
+</view> 

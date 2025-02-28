@@ -1,0 +1,68 @@
+<view class="container">
+  <!-- 昵称 -->
+  <view class="form-item">
+    <text class="label">昵称</text>
+    <input 
+      class="input" 
+      placeholder="请输入昵称" 
+      value="{{userInfo.name}}" 
+      bindinput="updateName" 
+    />
+  </view>
+
+  <!-- 性别 -->
+  <view class="form-item">
+    <text class="label">性别</text>
+    <picker 
+      class="picker" 
+      mode="selector" 
+      range="{{['男', '女']}}" 
+      value="{{userInfo.gender === '男' ? 0 : 1}}" 
+      bindchange="updateGender"
+    >
+      <view class="picker-text">{{userInfo.gender}}</view>
+    </picker>
+  </view>
+
+  <!-- 年龄 -->
+  <view class="form-item">
+    <text class="label">年龄</text>
+    <picker 
+      class="picker" 
+      mode="selector" 
+      range="{{ageRange}}" 
+      value="{{userInfo.age}}" 
+      bindchange="updateAge"
+    >
+      <view class="picker-text">{{userInfo.age}} 岁</view>
+    </picker>
+  </view>
+
+  <!-- 星座 -->
+  <view class="form-item">
+    <text class="label">星座</text>
+    <picker 
+      class="picker" 
+      mode="selector" 
+      range="{{constellations}}" 
+      value="{{constellationIndex}}" 
+      bindchange="updateConstellation"
+    >
+      <view class="picker-text">{{userInfo.constellation || '请选择星座'}}</view>
+    </picker>
+  </view>
+
+  <!-- 个人简介 -->
+  <view class="form-item">
+    <text class="label">个人简介</text>
+    <textarea 
+      class="textarea" 
+      placeholder="请输入个人简介" 
+      value="{{userInfo.bio}}" 
+      bindinput="updateBio" 
+    />
+  </view>
+
+  <!-- 保存按钮 -->
+  <button class="save-btn" bindtap="saveProfile">保存</button>
+</view> 

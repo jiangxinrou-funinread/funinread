@@ -1,0 +1,23 @@
+{
+  "name": "xiaoshuo2",
+  "version": "1.0.0",
+  "description": "Welcome to funinread!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangxinrou-funinread/funinread.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiangxinrou-funinread/funinread/issues"
+  },
+  "homepage": "https://github.com/jiangxinrou-funinread/funinread#readme"
+} 

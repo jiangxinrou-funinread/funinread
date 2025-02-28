@@ -1,0 +1,69 @@
+.container {
+  padding: 40rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+  width: 100%; /* 占满整个屏幕宽度 */
+}
+
+.label {
+  font-size: 32rpx;
+  color: #333;
+  width: 160rpx; /* 增加宽度，确保冒号对齐 */
+  text-align: right; /* 文字右对齐 */
+  margin-right: 20rpx; /* 增加右边距 */
+  padding-right: 10rpx; /* 增加右边距，确保冒号对齐 */
+}
+
+.input {
+  flex: 1;
+  font-size: 32rpx;
+  color: #333;
+  padding: 10rpx;
+  border: 1rpx solid #eee; /* 增加边框 */
+  border-radius: 8rpx; /* 圆角 */
+  background-color: #f9f9f9; /* 背景色 */
+}
+
+.picker {
+  flex: 1;
+}
+
+.picker-text {
+  font-size: 32rpx;
+  color: #333;
+  padding: 10rpx 0;
+  flex: 1; /* 确保文本占满剩余空间 */
+  text-align: left; /* 文字左对齐 */
+}
+
+.textarea {
+  flex: 1;
+  font-size: 32rpx;
+  color: #333;
+  padding: 10rpx;
+  height: 200rpx; /* 设置文本区域高度 */
+  border: 1rpx solid #eee; /* 增加边框 */
+  border-radius: 8rpx; /* 圆角 */
+  background-color: #f9f9f9; /* 背景色 */
+}
+
+.save-btn {
+  background-color: #13227a;
+  color: #fff;
+  border-radius: 16rpx;
+  font-size: 32rpx;
+  padding: 20rpx;
+  width: 100%; /* 占满整个屏幕宽度 */
+  margin-top: 20rpx; /* 增加上边距 */
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1); /* 增加阴影 */
+} 

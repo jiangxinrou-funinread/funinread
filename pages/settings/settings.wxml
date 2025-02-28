@@ -1,0 +1,13 @@
+<view class="container">
+  <!-- 用户协议 -->
+  <view class="setting-item" bindtap="goToUserAgreement">
+    <text class="label">用户协议</text>
+    <image class="arrow" src="https://funinreadpictures.blob.core.windows.net/icons/arrow-right.png" mode="aspectFit"></image>
+  </view>
+
+  <!-- 客服热线 -->
+  <view class="setting-item" bindtap="goToCustomerService">
+    <text class="label">客服热线</text>
+    <image class="arrow" src="https://funinreadpictures.blob.core.windows.net/icons/arrow-right.png" mode="aspectFit"></image>
+  </view>
+</view> 

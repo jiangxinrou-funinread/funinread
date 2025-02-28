@@ -1,10 +1,14 @@
 <view class="container">
   <!-- 用户信息 -->
   <view class="user-info">
-    <image class="user-avatar" src="{{user.avatar}}" mode="aspectFill"></image>
+    <image 
+      class="user-avatar" 
+      src="{{user.avatar}}" 
+      mode="aspectFill" 
+      bindtap="uploadAvatar" 
+    ></image>
     <view class="user-details">
       <text class="user-name">{{user.name}}</text>
-      <text class="user-level">Lv.1</text>
     </view>
   </view>
 
@@ -18,17 +22,18 @@
       <image class="function-icon" src="/icons/history.png"></image>
       <text class="function-text">历史</text>
     </view>
-    <view class="function-item" bindtap="goToBookmark">
-      <image class="function-icon" src="/icons/tag.png"></image>
-      <text class="function-text">书签</text>
-    </view>
-    <view class="function-item" bindtap="goToMessage">
-      <image class="function-icon" src="/icons/question.png"></image>
+    <view class="function-item" bindtap="goToMessages">
+      <image class="function-icon" src="/icons/message.png"></image>
       <text class="function-text">消息</text>
+      <view class="badge" wx:if="{{hasUnreadMessages}}"></view>
     </view>
-    <view class="function-item" bindtap="goToSettings">
-      <image class="function-icon" src="/icons/fix.png"></image>
-      <text class="function-text">设置</text>
+    <view class="function-item" bindtap="goToUserAgreement">
+      <image class="function-icon" src="/icons/agreement.png"></image>
+      <text class="function-text">用户协议</text>
+    </view>
+    <view class="function-item" bindtap="goToCustomerService">
+      <image class="function-icon" src="/icons/service.png"></image>
+      <text class="function-text">客服热线</text>
     </view>
   </view>
-</view> 
+</view>

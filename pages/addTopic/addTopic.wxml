@@ -1,0 +1,30 @@
+<view class="container">
+  <!-- 标题 -->
+  <view class="form-item">
+    <text class="label">标题：</text>
+    <input class="input" value="{{title}}" bindinput="updateTitle" placeholder="请输入标题" />
+  </view>
+
+  <!-- 正文 -->
+  <view class="form-item">
+    <text class="label">正文：</text>
+    <textarea class="textarea" value="{{content}}" bindinput="updateContent" placeholder="请输入正文" />
+  </view>
+
+  <!-- 添加话题 -->
+  <view class="form-item">
+    <text class="label">添加话题：</text>
+    <input class="input" value="{{topic}}" bindinput="updateTopic" placeholder="请输入或选择话题" />
+    <!-- 话题选择项 -->
+    <view class="topic-options" wx:if="{{showTopicOptions}}">
+      <view class="topic-option" wx:for="{{filteredTopicOptions}}" wx:key="index" bindtap="selectTopic" data-topic="{{item}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 保存并发布按钮 -->
+  <view class="form-item">
+    <button class="submit-btn" bindtap="submitTopic">保存并发布</button>
+  </view>
+</view> 

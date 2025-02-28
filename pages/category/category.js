@@ -1,17 +1,41 @@
 Page({
   data: {
     categories: [
-      { id: 1, name: '玄幻' },
-      { id: 2, name: '奇幻' },
-      { id: 3, name: '武侠' },
-      { id: 4, name: '仙侠' },
-      { id: 5, name: '都市' },
-      { id: 6, name: '言情' },
-      { id: 7, name: '历史' },
-      { id: 8, name: '军事' },
-      { id: 9, name: '游戏' },
-      { id: 10, name: '体育' },
-      { id: 11, name: '科幻' },
+      {
+        id: 1,
+        name: '玄幻',
+        icon: 'https://funinreadpictures.blob.core.windows.net/images/1740398795998821.jpg'
+      },
+      {
+        id: 2,
+        name: '都市',
+        icon: 'https://example.com/icon2.png'
+      },
+      {
+        id: 3,
+        name: '历史',
+        icon: 'https://example.com/icon3.png'
+      },
+      {
+        id: 4,
+        name: '科幻',
+        icon: 'https://example.com/icon4.png'
+      },
+      {
+        id: 5,
+        name: '游戏',
+        icon: 'https://example.com/icon5.png'
+      },
+      {
+        id: 6,
+        name: '武侠',
+        icon: 'https://example.com/icon6.png'
+      },
+      { id: 7, name: '奇幻' },
+      { id: 8, name: '仙侠' },
+      { id: 9, name: '言情' },
+      { id: 10, name: '军事' },
+      { id: 11, name: '体育' },
       { id: 12, name: '灵异' },
       { id: 13, name: '悬疑' },
       { id: 14, name: 'ABO' },
@@ -35,11 +59,13 @@ Page({
 
   // 跳转到分类详情页面
   goToCategoryDetail: function(e) {
-    const categoryId = e.currentTarget.dataset.id;
-    const categoryName = this.data.categories.find(category => category.id === categoryId).name;
-    console.log('跳转到分类详情页面:', categoryId, categoryName); // 调试信息
+    const id = e.currentTarget.dataset.id;
+    const category = this.data.categories.find(item => item.id === id);
+    wx.setNavigationBarTitle({
+      title: category.name // 设置导航栏标题为当前分类名称
+    });
     wx.navigateTo({
-      url: `/pages/categoryDetail/categoryDetail?categoryId=${categoryId}&categoryName=${categoryName}`
+      url: `/pages/categoryDetail/categoryDetail?id=${id}`
     });
   },
 

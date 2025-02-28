@@ -1,93 +1,82 @@
 .container {
-  padding: 30rpx;
-  background-color: #f8f9fa;
+  padding: 20rpx;
+  background-color: #f5f7fa;
   min-height: 100vh;
 }
 
-.cover {
-  width: 100%;
-  height: 400rpx;
-  border-radius: 16rpx;
-  margin-bottom: 30rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+.cover-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
 }
 
-.info {
-  background-color: #fff;
-  padding: 30rpx;
-  border-radius: 16rpx;
-  margin-bottom: 30rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08);
+.cover {
+  width: 200rpx;
+  height: 280rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.1);
+}
+
+.title-author {
+  text-align: center;
+  margin-bottom: 20rpx;
 }
 
 .title {
   font-size: 36rpx;
-  font-weight: 600;
+  font-weight: bold;
   color: #333;
-  margin-bottom: 20rpx;
+  margin-bottom: 10rpx;
 }
 
 .author {
   font-size: 28rpx;
   color: #666;
-  margin-bottom: 20rpx;
 }
 
-.summary {
-  font-size: 26rpx;
-  color: #999;
+.detail-box {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+}
+
+.detail-text {
+  font-size: 28rpx;
+  color: #666;
   line-height: 1.6;
 }
 
-.chapters {
+.chapter-section {
   background-color: #fff;
-  border-radius: 16rpx;
-  padding: 30rpx;
-  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08);
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
 }
 
-.chapter-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30rpx;
-}
-
-.chapter-header text:first-child {
+.section-title {
   font-size: 32rpx;
-  font-weight: 600;
-  color: #333;
-}
-
-.chapter-header text:last-child {
-  font-size: 28rpx;
-  color: #87CEEB;
-}
-
-.chapter-list {
+  font-weight: bold;
+  color: #13227a;
   margin-bottom: 20rpx;
 }
 
-.chapter-item {
-  padding: 25rpx 0;
-  border-bottom: 1rpx solid #eee;
+.chapter-list {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+
+.chapter-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
 }
 
 .chapter-item:last-child {
   border-bottom: none;
 }
 
-.chapter-item text {
+.chapter-title {
   font-size: 28rpx;
-  color: #666;
-  flex: 1;
-}
-
-.chapter-item::after {
-  content: '›';
-  font-size: 40rpx;
-  color: #ccc;
-  margin-left: 20rpx;
+  color: #333;
 } 

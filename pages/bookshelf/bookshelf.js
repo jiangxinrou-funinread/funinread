@@ -1,3 +1,5 @@
+import API_BASE_URL from '../../config';
+
 Page({
   data: {
     lastReadBook: {
@@ -8,48 +10,41 @@ Page({
       progress: 45, // 阅读进度百分比
       lastChapter: '第45章' // 上次阅读的章节
     },
-    books: [
-      {
-        id: 1,
-        title: '小说1',
-        author: '作者1',
-        cover: 'https://example.com/cover1.jpg',
-        progress: 45
-      },
-      {
-        id: 2,
-        title: '小说2',
-        author: '作者2',
-        cover: 'https://example.com/cover2.jpg',
-        progress: 78
-      },
-      {
-        id: 3,
-        title: '小说3',
-        author: '作者3',
-        cover: 'https://example.com/cover3.jpg',
-        progress: 12
-      },
-      {
-        id: 4,
-        title: '小说4',
-        author: '作者4',
-        cover: 'https://example.com/cover4.jpg',
-        progress: 60
-      },
-      {
-        id: 5,
-        title: '小说5',
-        author: '作者5',
-        cover: 'https://example.com/cover5.jpg',
-        progress: 90
-      }
-    ]
+    books: [],
+    page: 1,
+    loading: false,
+    hasMore: true
   },
 
   onLoad: function() {
+    this.fetchBooks();
     wx.setNavigationBarTitle({
       title: '书架' // 设置导航栏标题为书架
+    });
+  },
+
+  // 获取书籍列表
+  fetchBooks: function() {
+    if (this.data.loading || !this.data.hasMore) return;
+    this.setData({ loading: true });
+    wx.request({
+      url: `${API_BASE_URL}/books?page=${this.data.page}`,
+      method: 'GET',
+      success: (res) => {
+        if (res.statusCode === 200) {
+          const newBooks = res.data || [];
+          this.setData({
+            books: this.data.books.concat(newBooks),
+            page: this.data.page + 1,
+            hasMore: newBooks.length > 0,
+            loading: false
+          });
+        }
+      },
+      fail: (err) => {
+        console.error('获取书籍列表失败', err);
+        this.setData({ loading: false });
+      }
     });
   },
 

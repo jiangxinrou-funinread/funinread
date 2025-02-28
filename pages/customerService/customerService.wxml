@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="agreement-content">
+    <text class="title">客服热线</text>
+    <text class="content">
+      若想咨询其他问题，可致电给人工客服：\n
+      <text class="phone">18961195083</text>\n
+      服务时间：8:30-20:30
+    </text>
+  </view>
+</view> 

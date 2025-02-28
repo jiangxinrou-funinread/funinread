@@ -13,11 +13,11 @@
           <image class="topic-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
           <view class="topic-info">
             <text class="topic-author">{{item.author}}</text>
+            <text class="topic-time">{{item.time}}</text>
           </view>
-          <image class="more-btn" src="/icons/more.png" bindtap="showMoreOptions" data-id="{{item.id}}" catchtap="stopPropagation"></image>
         </view>
-        <view class="topic-title">{{item.title}}</view>
-        <view class="topic-content">{{item.content}}</view>
+        <text class="topic-title">{{item.title}}</text>
+        <text class="topic-content">{{item.content}}</text>
         <view class="topic-footer">
           <view class="topic-action" bindtap="toggleLike" data-id="{{item.id}}">
             <image class="action-icon" src="{{item.isLiked ? '/icons/good-active.png' : '/icons/good.png'}}"></image>
@@ -27,11 +27,6 @@
             <image class="action-icon" src="/icons/say.png"></image>
             <text class="action-text">{{item.comments}}</text>
           </view>
-          <text class="topic-time">{{item.time}}</text>
-        </view>
-        <view class="more-options" wx:if="{{currentMoreOptionsId === item.id}}">
-          <view class="option" bindtap="markAsNotInterested" data-id="{{item.id}}">不感兴趣</view>
-          <view class="option" bindtap="reportContent" data-id="{{item.id}}">内容反馈</view>
         </view>
       </view>
     </block>

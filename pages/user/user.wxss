@@ -21,6 +21,7 @@
   border-radius: 50%;
   border: 4rpx solid #13227a;
   margin-bottom: 20rpx;
+  cursor: pointer;
 }
 
 .user-details {
@@ -47,6 +48,7 @@
   box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
   padding: 0;
   width: 90%;
+  overflow: hidden;
 }
 
 .function-item {
@@ -56,10 +58,21 @@
   border-bottom: 1rpx solid #f0f0f0;
   width: 100%;
   margin: 0;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
 }
 
 .function-item:last-child {
   border-bottom: none;
+}
+
+.function-item button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
 }
 
 .function-icon {
@@ -71,4 +84,14 @@
 .function-text {
   font-size: 32rpx;
   color: #333;
-} 
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rpx;
+  height: 16rpx;
+  background-color: #ff4d4f;
+  border-radius: 50%;
+}

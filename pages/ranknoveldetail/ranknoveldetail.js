@@ -1,7 +1,13 @@
 // novelDetail.js
 Page({
   data: {
-    novelDetail: {}
+    novelDetail: {
+      cover: 'https://funinreadpictures.blob.core.windows.net/images/cover1.jpg',
+      title: '',
+      author: '',
+      summary: '',
+      chapters: []
+    }
   },
   onLoad: function(options) {
     var novelId = options.novelId;

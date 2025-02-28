@@ -3,6 +3,7 @@
   <view class="category-list">
     <block wx:for="{{categories}}" wx:key="id">
       <view class="category-item" bindtap="goToCategoryDetail" data-id="{{item.id}}">
+        <image class="category-icon" src="{{item.icon}}" mode="aspectFill"></image>
         <text class="category-name">{{item.name}}</text>
       </view>
     </block>

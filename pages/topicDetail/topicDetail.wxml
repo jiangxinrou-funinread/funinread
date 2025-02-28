@@ -1,51 +1,84 @@
 <view class="container">
-  <!-- 话题详情 -->
+  <!-- 帖子详情 -->
   <view class="topic-detail">
+    <!-- 发布者信息 -->
     <view class="topic-header">
       <image class="topic-avatar" src="{{topic.avatar}}" mode="aspectFill"></image>
       <view class="topic-info">
         <text class="topic-author">{{topic.author}}</text>
         <text class="topic-time">{{topic.time}}</text>
       </view>
+      <!-- 删除按钮，仅自己发布的帖子显示 -->
+      <view class="delete-btn" wx:if="{{topic.author === '当前用户'}}" catchtap="deleteTopic">
+        <text>删除</text>
+      </view>
     </view>
+
+    <!-- 帖子标题 -->
     <text class="topic-title">{{topic.title}}</text>
-    <text class="topic-content">{{topic.content}}</text>
-    <view class="topic-footer">
-      <view class="topic-action" bindtap="toggleLike">
+
+    <!-- 帖子内容 -->
+    <view class="topic-content-box">
+      <text class="topic-content">{{topic.content}}</text>
+    </view>
+
+    <!-- 话题标签 -->
+    <text class="topic-tag">#{{topic.topic}}</text>
+    <view class="divider"></view>
+  </view>
+
+  <!-- 评论区 -->
+  <scroll-view class="comment-list" scroll-y>
+    <block wx:if="{{comments.length > 0}}">
+      <block wx:for="{{comments}}" wx:key="id">
+        <view class="comment-item">
+          <view class="comment-header">
+            <image class="comment-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+            <view class="comment-info">
+              <text class="comment-author">{{item.author}}</text>
+              <text class="comment-time">{{item.time}}</text>
+            </view>
+            <!-- 删除按钮 -->
+            <view class="delete-btn" wx:if="{{item.author === '当前用户' || topic.author === '当前用户'}}" bindtap="deleteComment" data-id="{{item.id}}">
+              <text>删除</text>
+            </view>
+          </view>
+          <text class="comment-content">{{item.content}}</text>
+        </view>
+      </block>
+    </block>
+    <block wx:else>
+      <view class="no-comment">
+        <text>暂时还没有人评论哦~</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 底部操作栏 -->
+  <view class="footer">
+    <!-- 点赞和评论图标 -->
+    <view class="footer-actions">
+      <view class="action-item" bindtap="toggleLike">
         <image class="action-icon" src="{{topic.isLiked ? '/icons/good-active.png' : '/icons/good.png'}}"></image>
         <text class="action-text">{{topic.likes}}</text>
       </view>
-      <view class="topic-action">
+      <view class="action-item">
         <image class="action-icon" src="/icons/say.png"></image>
         <text class="action-text">{{topic.comments}}</text>
       </view>
     </view>
-  </view>
 
-  <!-- 评论列表 -->
-  <view class="comment-list">
-    <block wx:for="{{comments}}" wx:key="id">
-      <view class="comment-item">
-        <view class="comment-header">
-          <image class="comment-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
-          <view class="comment-info">
-            <text class="comment-author">{{item.author}}</text>
-            <text class="comment-time">{{item.time}}</text>
-          </view>
-        </view>
-        <text class="comment-content">{{item.content}}</text>
-      </view>
-    </block>
+    <!-- 评论输入框 -->
+    <view class="comment-input-area">
+      <input
+        class="comment-input"
+        placeholder="写下你的评论..."
+        value="{{newComment}}"
+        bindinput="onCommentInput"
+        bindfocus="expandInput"
+        bindblur="shrinkInput"
+      />
+      <button class="comment-submit-btn" bindtap="submitComment" wx:if="{{isInputExpanded}}">发布</button>
+    </view>
   </view>
-
-  <!-- 评论输入框 -->
-  <view class="comment-input-area">
-    <input
-      class="comment-input"
-      placeholder="写下你的评论..."
-      value="{{newComment}}"
-      bindinput="onCommentInput"
-    />
-    <button class="comment-submit-btn" bindtap="submitComment">提交</button>
-  </view>
-</view> 
+</view>

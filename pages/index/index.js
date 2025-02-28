@@ -4,14 +4,14 @@ Page({
     currentButton: '', // 当前选中的按钮
     swiperList: [],
     todayRecommend: [
-      { id: 1, title: '小说1', cover: 'https://example.com/cover1.jpg' },
-      { id: 2, title: '小说2', cover: 'https://example.com/cover2.jpg' },
-      { id: 3, title: '小说3', cover: 'https://example.com/cover3.jpg' }
+      { id: 1, title: '小说1', cover: 'https://funinreadpictures.blob.core.windows.net/images/cover1.jpg' },
+      { id: 2, title: '小说2', cover: 'https://funinreadpictures.blob.core.windows.net/images/cover2.jpg' },
+      { id: 3, title: '小说3', cover: 'https://funinreadpictures.blob.core.windows.net/images/cover3.jpg' }
     ],
     hotNovelList: [
-      { id: 4, title: '小说4', cover: 'https://example.com/cover4.jpg' },
-      { id: 5, title: '小说5', cover: 'https://example.com/cover5.jpg' },
-      { id: 6, title: '小说6', cover: 'https://example.com/cover6.jpg' }
+      { id: 4, title: '小说4', cover: 'https://funinreadpictures.blob.core.windows.net/images/cover4.jpg' },
+      { id: 5, title: '小说5', cover: 'https://funinreadpictures.blob.core.windows.net/images/cover5.jpg' },
+      { id: 6, title: '小说6', cover: 'https://funinreadpictures.blob.core.windows.net/images/cover6.jpg' }
     ],
     novelList: []
   },
@@ -27,7 +27,7 @@ Page({
   // 获取轮播图数据
   fetchSwiperData: function() {
     wx.request({
-      url: 'http://192.168.110.149:3000/api/swiper', // 替换为你的服务器API地址
+      url: 'https://content.funinread.cn/api/swiper',
       method: 'GET',
       success: (res) => {
         this.setData({
@@ -43,7 +43,7 @@ Page({
   // 获取小说列表数据
   fetchNovelData: function() {
     wx.request({
-      url: 'http://192.168.110.149:3000/api/novels', // 替换为你的服务器API地址
+      url: 'https://api.funinread.cn/api/novels',
       method: 'GET',
       success: (res) => {
         this.setData({
@@ -120,7 +120,7 @@ Page({
   goToNovelDetail: function(e) {
     const novelId = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/pages/novelDetail/novelDetail?id=${novelId}`
+      url: `/pages/novelDetail/novelDetail?novelId=${novelId}`
     });
   },
 

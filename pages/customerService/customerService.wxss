@@ -1,0 +1,32 @@
+.container {
+  padding: 40rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.agreement-content {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+  width: 100%; /* 确保占满整个横向屏幕 */
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #13227a;
+  margin-bottom: 20rpx;
+}
+
+.content {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+}
+
+.phone {
+  font-size: 32rpx;
+  color: #13227a;
+  font-weight: bold;
+} 

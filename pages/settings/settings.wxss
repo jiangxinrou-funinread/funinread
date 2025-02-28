@@ -1,0 +1,41 @@
+.container {
+  padding: 40rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0,0,0,0.05);
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.label {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.picker {
+  flex: 1;
+  text-align: right;
+}
+
+.picker-text {
+  font-size: 32rpx;
+  color: #666;
+}
+
+.switch {
+  transform: scale(0.8);
+}
+
+.arrow {
+  width: 40rpx;
+  height: 40rpx;
+} 

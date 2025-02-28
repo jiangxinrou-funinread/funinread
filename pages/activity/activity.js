@@ -1,7 +1,7 @@
 Page({
   data: {
     activityImages: [
-      'https://example.com/activity1.jpg',
+      'https://funinreadpictures.blob.core.windows.net/images/1740398795998821.jpg',
       'https://example.com/activity2.jpg',
       'https://example.com/activity3.jpg',
       'https://example.com/activity4.jpg'
