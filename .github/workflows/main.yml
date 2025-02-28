@@ -1,0 +1,17 @@
+   name: Deploy to Server
+
+   on:
+     push:
+       branches:
+         - test-branch
+
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Checkout code
+           uses: actions/checkout@v2
+
+         - name: Deploy to Server
+           run: |
+             ssh funinread@20.189.78.74 'cd /xiaoshuo2 && git pull origin test-branch && npm install && pm2 restart server.js'
